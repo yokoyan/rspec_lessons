@@ -12,10 +12,18 @@ RSpec.describe "A calc" do
 
   # itで囲まれた範囲がexample
   # 期待される振る舞いのこと
-  it "given 2 and 3, returns 5" do
-    # 期待値:expectで記述する
-    expect(@calc.add(2, 3)).to eq(5)
+  context "when normal mode" do
+    it "given 2 and 3, returns 5" do
+      # 期待値:expectで記述する
+      expect(@calc.add(2, 3)).to eq(5)
+    end
   end
+
+  context "when graph mode" do
+    it "draws graph" do
+    end
+  end
+
   # 三角測量（違った角度からテストを加えること）
   it "given 5 and 8, returns 13" do
     # 期待値:expectで記述する
